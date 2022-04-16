@@ -1,6 +1,6 @@
 import re
+import csv
 import sys
-
 import numpy as np
 import pandas as pd
 from PIL import Image
@@ -50,7 +50,7 @@ def main(material_scoring_dict):
       idx, max_score = id, sustainability_score
 
   if idx != -1:
-    st.write(f"### Best Item :: {idx + 1:02d} with sustainability score :: {max_score}.")
+    st.write(f"### Best Item {idx + 1:02d} with sustainability score {max_score}.")
 
   if uploaded_files:
     with st.container():
@@ -62,14 +62,16 @@ def main(material_scoring_dict):
         
         # Display uploaded image
         with col:
-          st.write(f"Item {id + 1:0d} ; Score :: {sustainability_score}")
+          st.write(f"Item {idx + 1:02d} Score {sustainability_score}")
           st.image(item, caption=f"Item {id + 1:02d}", width=250)
 
 
 if __name__ == "__main__":
 
-  material_scoring = pd.read_csv('./material_scoring.csv', header=0, dtype={"Material": str, "Sustainability_Score": np.float64})
-  material_scoring['Material'] = material_scoring['Material'].str.lower()
-  material_scoring_dict = material_scoring.to_dict()
+  material_scoring_dict = dict()
+  with open('./material_scoring.csv', 'r') as file:
+    csv_reader = csv.reader(file, delimiter=",")
+    for row in csv_reader:
+      material_scoring_dict[row[0].lower()] = float(row[1])
 
   main(material_scoring_dict)
