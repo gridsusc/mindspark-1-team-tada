@@ -20,7 +20,7 @@ def calculate_sustainability_score(percentages_materials, material_scoring_dict)
 def main(material_scoring_dict):
   matcher = re.compile(r'(\d+)% ([a-zA-Z]+)')
 
-  st.title("Sustainable Shopping Suggester")
+  st.title("Sustainable Shopper")
 
   # Show upload image option
   uploaded_files = st.file_uploader("Please upload a fabric content tag: ", accept_multiple_files=True)
