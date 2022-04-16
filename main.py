@@ -8,17 +8,17 @@ import streamlit as st
 import pytesseract
 
 
-def calculate_sustainability_score(percentages_materials, material_scoring_key):
+def calculate_sustainability_score(percentages_materials, material_scoring_dict):
   # Calculate score for the whole item
   sustainability_score = 0.0
   for percentage_material in percentages_materials:
     percentage, material = float(percentage_material[0]) / 100, percentage_material[1].lower()
-    if material in material_scoring_key:
-      sustainability_score += (percentage * material_scoring_key[material])
+    if material in material_scoring_dict:
+      sustainability_score += (percentage * material_scoring_dict[material])
   
   return sustainability_score
 
-def main(material_scoring_key):
+def main(material_scoring_dict):
   matcher = re.compile(r'(\d+)% ([a-zA-Z]+)')
 
   st.title("Sustainable Shopping Suggester")
@@ -42,7 +42,7 @@ def main(material_scoring_key):
     groups = matcher.findall(txt)
 
     # Function to parse and get fabric contents
-    sustainability_score = calculate_sustainability_score(groups, material_scoring_key)
+    sustainability_score = calculate_sustainability_score(groups, material_scoring_dict)
 
     sustainability_scores.append(sustainability_score)
 
@@ -70,6 +70,6 @@ if __name__ == "__main__":
 
   material_scoring = pd.read_csv('./material_scoring.csv', header=0, dtype={"Material": str, "Sustainability_Score": np.float64})
   material_scoring['Material'] = material_scoring['Material'].str.lower()
-  material_scoring_key = material_scoring.to_dict()
+  material_scoring_dict = material_scoring.to_dict()
 
-  main(material_scoring_key)
+  main(material_scoring_dict)
