@@ -1,8 +1,6 @@
 import re
 import csv
 import sys
-import numpy as np
-import pandas as pd
 from PIL import Image
 import streamlit as st
 import pytesseract
@@ -11,6 +9,7 @@ import pytesseract
 def calculate_sustainability_score(percentages_materials, material_scoring_dict):
   # Calculate score for the whole item
   sustainability_score = 0.0
+
   for percentage_material in percentages_materials:
     percentage, material = float(percentage_material[0]) / 100, percentage_material[1].lower()
     if material in material_scoring_dict:
