@@ -18,7 +18,7 @@ Looking closer...
 
 ![Water Usage for 1 kg of Material Magnified](./data/water_usage_magnified.png)
 
-For more information, please take a look at our presentation: [Presentation](./Sustainable Shopper.pdf)
+For more information, please take a look at our presentation: [Presentation](https://github.com/gridsusc/mindspark-1-team-tada/blob/main/Sustainable%20Shopper.pdf)
 
 Here are the sources we have used to inform our sustainability scores:
 
@@ -26,6 +26,8 @@ Here are the sources we have used to inform our sustainability scores:
 2. [Water Consumption for Water](https://www.theworldcounts.com/challenges/consumption/clothing/cotton-farming-water-consumption/story)
 3. [Guide to Sustainability Levels of Fabrics](https://www.eco-stylist.com/a-guide-to-the-most-and-least-sustainable-fabrics/)
 4. [How long will a fabric take to decompose?](https://hellojackalo.com/blogs/news/fabric-decompose)
+5. [Value chain sustainability](https://apparelcoalition.org/the-higg-index/)
+6. [Higg Index](https://www.kymo.de/en/blog/how-sustainable-are-textiles-a-comparison-using-the-higg-material-index)
 
 
 
