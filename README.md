@@ -1,5 +1,10 @@
 # Team Tada
 
+## Sustainable Shopper
+
+[Presentation](https://github.com/gridsusc/mindspark-1-team-tada/blob/main/Sustainable%20Shopper.pdf) <br>
+[Video](https://github.com/gridsusc/mindspark-1-team-tada/blob/main/video.mp4)
+
 We want to help reduce textile waste!
 
 Why?
@@ -20,6 +25,7 @@ Looking closer...
 
 For more information, please take a look at our presentation: [Presentation](https://github.com/gridsusc/mindspark-1-team-tada/blob/main/Sustainable%20Shopper.pdf)
 
+
 Here are the sources we have used to inform our sustainability scores:
 
 1. [Water Usage for Materials](https://waterfootprint.org/media/downloads/WFA_Polyester_and__Viscose_2017.pdf)
@@ -29,6 +35,15 @@ Here are the sources we have used to inform our sustainability scores:
 5. [Value chain sustainability](https://apparelcoalition.org/the-higg-index/)
 6. [Higg Index](https://www.kymo.de/en/blog/how-sustainable-are-textiles-a-comparison-using-the-higg-material-index)
 
+Files:
 
+📁 data:
+   - sustainability_req.xlsx: Includes research conducted, data collected and calculations made for the sustainability score
+   - EDA.ipynb: Notebook used for initial data generation
+   - water_usage.png and water_usage_magnified.png: Plots
+   
+📁 init_idea: Initial idea we started with before pivoting to Sustainable Shopper
 
+main.py: This is the main file with our code for the application
 
+material_scoring.csv: Final sustainability scores used for the calculation
