@@ -62,7 +62,7 @@ def main(material_scoring_dict):
         # Display uploaded image
         with col:
           st.write(f"Item {idx + 1:02d} Score {sustainability_score:.02f}")
-          st.image(item, caption=f"Item {id + 1:02d}", width=250)
+          st.image(item, width=250)
 
 
 if __name__ == "__main__":
